@@ -26,5 +26,31 @@ Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13"
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 var fizzBuzz = (n) => {
-
+    // Create a const variable for the sequence numbers
+    const s = [];
+    // create a const array for answer
+    const answer = [];
+    // for each i add 1 if i is smaller than n and push i into the s array
+    for (let i = 1; i <= n; i++) {
+        s.push(i)
+    }
+    console.log(s);
+    for (let i = 1; i <= s.length; i++) {
+        if (i % 5 == 0 && i % 3 == 0) {
+            answer.push("FizzBuzz");
+        } else if (i % 5 == 0) {
+            answer.push("Buzz");
+        } else if (i % 3 == 0) {
+            answer.push("Fizz")
+        } else {
+            answer.push(i);
+        }
+    }
+    console.log(answer);
 }
+
+let n = 20;
+
+fizzBuzz(n);
+
+console.log(n);
