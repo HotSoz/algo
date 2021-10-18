@@ -29,28 +29,38 @@ var fizzBuzz = (n) => {
     // Create a const variable for the sequence numbers
     const s = [];
     // create a const array for answer
-    const answer = [];
+    const array = [];
     // for each i add 1 if i is smaller than n and push i into the s array
     for (let i = 1; i <= n; i++) {
         s.push(i)
     }
-    console.log(s);
+    // assign n as an array
+    // create for loop to iterate through the array with the following conditions
     for (let i = 1; i <= s.length; i++) {
         if (i % 5 == 0 && i % 3 == 0) {
-            answer.push("FizzBuzz");
+            // if i equals to a remainder of 0 when divided by both 5 and 3 then push "FizzBuzz"
+            array.push("FizzBuzz");
         } else if (i % 5 == 0) {
-            answer.push("Buzz");
+            // if i equals to a remainder of 0 when divided by 5 then push "Buzz"
+            array.push("Buzz");
         } else if (i % 3 == 0) {
-            answer.push("Fizz")
+            // if i equals to a remainder of 0 when divided by 3 then push "Fizz"
+            array.push("Fizz")
         } else {
-            answer.push(i);
+            // if the following conditions are not met push the number i as a string
+            array.push(i.toString());
         }
     }
-    console.log(answer);
+    // use the while loop until you can find a solution for the concat method
+    while (array.length > 0) {
+        answer.push(array.shift());
+    }
 }
 
 let n = 20;
 
+let answer = [];
+
 fizzBuzz(n);
 
-console.log(n);
+console.log(answer);

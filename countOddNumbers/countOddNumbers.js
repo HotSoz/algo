@@ -19,5 +19,29 @@ Explanation: The odd numbers between 8 and 10 are [9].
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 var countOdds = (low, high) => {
-
+    // create an array to hold numbers
+    const nums = [];
+    // create a loop that pushes low to high numbers into nums array
+    for (let i = low; i <= high; i++) {
+        nums.push(i);
+    }
+    // create a loop to iterate through the array to find odd numbers
+    // add 1 to output if there is an odd number encountered
+    for (let i = 0; i <= nums.length; i++) {
+        if (nums[i] % 2 == 1) {
+            output += 1;
+        }
+    }
 }
+
+
+
+let s = 10;
+
+let a = 26;
+
+var output = 0;
+
+countOdds(s, a);
+
+console.log (output);
